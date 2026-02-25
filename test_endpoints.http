@@ -3,6 +3,15 @@ POST http://localhost:8000/send-message?topic=test-topic
 Content-Type: application/json
 
 {
-  "message": "Hello Kafka33",
-  "id": 111
+  "message": "test-topic Hello Kafka",
+  "id": 2
+}
+
+### Send Message to Kafka
+POST http://localhost:8000/send-message?topic=payment-topic
+Content-Type: application/json
+
+{
+  "message": "payment-topic Hello Kafka",
+  "id": 2
 }
