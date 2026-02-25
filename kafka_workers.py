@@ -26,7 +26,7 @@ async def process_message(msg):
 async def consume():
     # 1. 컨슈머 인스턴스 생성
     consumer = AIOKafkaConsumer(
-        'test-topic',  # 토픽 이름 수정 (my_topic -> test-topic)
+        'test-topic',
         bootstrap_servers='localhost:9092',
         group_id="my-worker-group",
         value_deserializer=lambda v: json.loads(v.decode('utf-8')),
